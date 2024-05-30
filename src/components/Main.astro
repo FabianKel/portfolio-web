@@ -1,11 +1,31 @@
 ---
 import Thunder from "@components/assets/icons/thunder.astro"
-
 import Pic from "@components/assets/images/profPic.astro"
 
-import Card from "@components/Card.astro";
+import byteIMG from "@components/assets/images/LOGO-BYTE-02.png"
+import apllIMG from "@components/assets/images/APLL.png"
+
+/*----------------------Iconos Skills---------------------------*/
+
+import androidStudioSvg from "@components/assets/icons/svg/androidstudio.astro"
+import Kotlin from "@components/assets/icons/svg/kotlin.astro"
+import Django from "@components/assets/icons/svg/django.astro"
+import Jira from "@components/assets/icons/svg/jira.astro"
+import Html from "@components/assets/icons/svg/html.astro"
+import Css from "@components/assets/icons/svg/css.astro"
+import Python from "@components/assets/icons/svg/python.astro"
+
+
+
+/*--------------------------------------------------------------*/
 
 import Tag from "@components/Tag.astro";
+
+import Carousel from "@components/Carousel.astro";
+
+import SkillTag from "@components/SkillTag.astro";
+
+import Image from "astro/components/Image.astro";
 
 ---
 <main class="h-screen ml-0 w-11/12  md:ml-80 md:w-3/5 lg:ml-80">
@@ -45,23 +65,53 @@ import Tag from "@components/Tag.astro";
       </div>
     </section>
 
+    <section id="experience" class="py-8">
+      <a class=" font-subtitles text-subtitles text-4xl">Experience</a>
+      <div class="bg-card shadow-md rounded-lg py-6 mt-6 items-center flex flex-col">
+        <div class="bg-tag shadow-md rounded-md mx-5 mt-5 px-10 py-6 flex flex-col gap-5 md:flex md:flex-row md:gap-5">
+          <div class="flex flex-col gap-4">
+            <a class="text-text font-subtitles">Internship at Byte</a>
+            <Image src={byteIMG} alt="Byte-Logo" class=" w-24 self-center"/>
+            <a class=" text-body font-body">October 2021 - December 2021</a>
+          </div>
+          <div class=" flex flex-col gap-3 ml-5 md:w-2/3">
+            <li class=" text-body font-body">During my internship at Byte Guatemala, I worked on web application development. The primary focus of my internship was learning new technologies, particularly in the area of mobile app development.</li>
+            <li class=" text-body font-body">This experience allowed me to gain valuable knowledge and skills that are essential for building modern mobile applications</li>
+            <div class="flex flex-wrap mt-4 gap-3">
+              <SkillTag icon={androidStudioSvg} text="Android Studio"/>
+              <SkillTag icon={Kotlin} text="Kotlin"/>
+            </div>
+          </div>
+        </div>
+        <div class="bg-tag shadow-md rounded-md mx-5 mt-5 px-10 py-6 flex flex-col gap-5 md:flex md:flex-row md:gap-5">
+          <div class="flex flex-col gap-6">
+            <a class="text-text font-subtitles">Autopartes Los Luises Operations</a>
+            <Image src={apllIMG} alt="APLL-Logo" class=" w-32 self-center"/>
+            <a class=" text-body font-body">January 2024 - June 2024</a>
+          </div>
+          <div class=" flex flex-col gap-3 ml-5 md:w-2/3">
+            <li class=" text-body font-body">Worked on a College team</li>
+            <li class=" text-body font-body">Utilized SCRUM, UX and Design Thinking methodologies during the initial phases of a project aimed at developing an integrated solution for inventory management, sales, and user administration.</li>
+            <div class="flex flex-wrap mt-4 gap-3">
+              <SkillTag icon={Python} text="Python"/>
+              <SkillTag icon={Django} text="Django"/>
+              <SkillTag icon={Jira} text="Jira"/>
+              <Tag icon=💡 text="SCRUM"/>
+              <SkillTag icon={Html} text="HTML"/>
+              <SkillTag icon={Css} text="CSS"/>
+            </div>
+          </div>
+        </div>
+    </section>
 
 
     <section id="projects" class="py-16">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold mb-4">Proyectos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Ejemplo de Proyecto -->
-          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="p-6">
-              <h3 class="text-lg font-bold mb-2">Proyecto 1</h3>
-              <p class="text-gray-700">Descripción breve del proyecto...</p>
-            </div>
-          </div>
-          <!-- Añade más proyectos aquí -->
-        </div>
-      </div>
+
+      <Carousel/>
+
     </section>
+
+
     <section id="contact" class="py-16 bg-gray-50">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold mb-4">Contacto</h2>

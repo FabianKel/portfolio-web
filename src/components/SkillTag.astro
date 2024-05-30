@@ -1,0 +1,16 @@
+---
+
+export interface Props {
+  icon?: any; 
+  text: string;
+  color?: string;
+}
+
+const { icon: Icon, text, color} = Astro.props;
+---
+
+<div class="shadow-md rounded-lg overflow-hidden bg-tag py-2 px-5 flex flex-row gap-3">
+  <span class="icon"><Icon /></span>
+  <span class="text-text">{ text }</span>
+</div>
+
