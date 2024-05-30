@@ -1,0 +1,103 @@
+---
+import Thunder from "@components/assets/icons/thunder.astro"
+
+import Pic from "@components/assets/images/profPic.astro"
+
+import Card from "@components/Card.astro";
+
+import Tag from "@components/Tag.astro";
+
+---
+<main class="h-screen ml-0 w-11/12  md:ml-80 md:w-3/5 lg:ml-80">
+  <section id="name" class="py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div class="flex flex-row items-center">
+      <svg class=" size-32" viewBox="0 0 2400 2400">
+        <Thunder />    
+      </svg>
+      
+      <h2 class=" text-6xl font-name mb-4 text-highlightedText"> Derek Arreaga</h2>
+    </div>
+      <p class=" text-3xl pt-4 leading-7 text-text font-headings">Evolving Software Developer</p>
+    </div>
+  </section>
+
+
+
+    <section id="about" class="py-16">
+      <a class=" font-subtitles text-subtitles text-4xl">About Me</a>
+      <div class="bg-card shadow-md rounded-lg py-6 mt-6 items-center flex flex-col md:flex-row">
+        <div class="md:mx-9">
+        <svg class=" size-72 rounded-full my-5" viewBox="0 0 959.9999999999999 959.9999999999999">
+          <Pic/>
+        </svg>
+      </div>
+        <div class="px-4">
+          <p class="text-body text-xl">I'm currently pursuing my third year of studies in Computer Science Engineering. I consider myself an evolving software engineer, aiming to become a full-stack developer in the future.</p>
+          <p class="text-body text-xl mt-7">Some of my hobbies:</p>
+          <div class="flex flex-wrap mt-4 gap-3">
+            <Tag icon="🎮" text="Video Games"/>
+            <Tag icon="⚽" text="Soccer" />
+            <Tag icon="🧩" text="Puzzles"/>
+            <Tag icon="⛰️" text="Hiking" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="projects" class="py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold mb-4">Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Ejemplo de Proyecto -->
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">Proyecto 1</h3>
+              <p class="text-gray-700">Descripción breve del proyecto...</p>
+            </div>
+          </div>
+          <!-- Añade más proyectos aquí -->
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+        <form action="#" method="POST" class="bg-white shadow-lg rounded-lg p-6">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+<script>
+	const toggleButton = document.getElementById('hideButton');
+	const Componente = document.getElementById('mainC');
+
+	if(toggleButton && Componente){
+		toggleButton.addEventListener('click', function() {
+		Componente.classList.toggle('pl-0');
+		});
+	}
+</script>
+<style>
+
+    nav{
+        color: #FFD948;
+    }
+
+
+</style>

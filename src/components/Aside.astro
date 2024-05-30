@@ -1,0 +1,64 @@
+---
+
+---
+<aside id="asideC">
+    <nav class="fixed top-0 left-0 h-screen pl-5 py-32 w-2/5 md:flex md:w-1/5 lg:w-1/5 m-0 flex flex-col justify-evenly">
+
+        <img src="" alt="logo"/>
+        <a href="#About">About Me</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Projects">My Projects</a>
+        <a href="#Skills">My Skills</a>
+        <a href="#Contact">Contact me</a>
+    </nav>
+</aside>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('hideButton');
+  const componente = document.getElementById('asideC');
+
+  if (toggleButton && componente) {
+    toggleButton.addEventListener('click', () => {
+      if (componente.classList.contains('hidden')) {
+        // Mostrar el componente
+        componente.classList.remove('hidden', 'slide-out-left');
+      } else {
+        // Ocultar el componente con animación
+        componente.classList.add('slide-out-left');
+        // Usar un timeout para añadir la clase 'hidden' después de la animación
+        setTimeout(() => {
+          componente.classList.add('hidden');
+        }, 500); // Tiempo en ms que dura la animación (0.5s)
+      }
+    });
+  }
+});
+</script>
+
+
+<style>
+    nav{
+        color: #FFD948;
+        background-color: #24203D;
+    }
+    a{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    /* src/styles/custom.css */
+    @keyframes slide-out-left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    }
+
+    .slide-out-left {
+    animation: slide-out-left 0.5s forwards;
+    }
+</style>
