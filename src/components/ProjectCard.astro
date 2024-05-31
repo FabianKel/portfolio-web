@@ -1,31 +1,47 @@
 ---
-/*
+import Image from "astro/components/Image.astro";
 
-Arreglar el llevar los tags como props
+import Github from "@components/assets/icons/svg/github.astro"
+
 
 interface Props {
-  image: string;
+  image: any;
   title: string;
-  description:  string;
+  description1:  string;
+  description2: string;
   date: string;
-  tags:any;
+  repolink: string;
 }
 
 
-const { image, title, description, date, tags: Tags} = Astro.props;
+const { image, title, description1, description2, date, repolink} = Astro.props;
+
 
 ---
-<div class="lg:w-1/3 sm:w-1/2 p-4">
+<div class=" h-72 lg:w-1/3 sm:w-1/2 p-4">
     <div class="flex relative size-72">
-      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={image}>
-      <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+      <Image alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+      src={image}
+      />
+      <div class="px-8 py-5 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
         <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">{title}</h2>
-        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{date}</h1>
-        <p class="leading-relaxed">{description}</p>
+        <h1 class="title-font text-lg font-medium text-gray-900 mb-1">{date}</h1>
+        <p class="leading-relaxed">
+          {description1}
+          <a>
+            {description2}
+          </a>
+        </p>
+        <button onclick={() => handleClick(repolink)} class="py-3">
+          <Github/>
+        </button>
       </div>
     </div>
-    <div class="flex flex-wrap mt-4 gap-3">
-        {Tags}
-    </div>
+    
 </div>
-*/
+
+<script>
+  function handleClick(link) {
+    window.open(link, '_blank');
+  }
+</script>

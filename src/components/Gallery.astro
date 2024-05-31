@@ -11,6 +11,11 @@ import Python from "@components/assets/icons/svg/python.astro"
 import SQL from "@components/assets/icons/svg/sql.astro"
 import JS from "@components/assets/icons/svg/javascript.astro"
 import Docker from "@components/assets/icons/svg/docker.astro"
+import React from "@components/assets/icons/svg/react.astro"
+import Vite from "@components/assets/icons/svg/vite.astro"
+import Csharp from "@components/assets/icons/svg/csharp.astro"
+import Unity from "@components/assets/icons/svg/unity.astro"
+import Neo4j from "@components/assets/icons/svg/neo4j.astro"
 
 
 
@@ -18,8 +23,14 @@ import Docker from "@components/assets/icons/svg/docker.astro"
 /*--------------------------------------------------------------*/
 
 import BarcaApi from "@components/assets/images/Barca-Api-Logo.png";
+import BarcaBlog from "@components/assets/images/BarcaBlog.png";
+import MagicWords from "@components/assets/images/MagicWordsIcon.png";
+import Dexter from "@components/assets/images/DexterDrawing.png";
+import Coding from "@components/assets/images/coding1.jpg";
 
-//import ProjectCard from "@components/ProjectCard.astro";
+
+
+import ProjectCard from "@components/ProjectCard.astro";
 import Image from "astro/components/Image.astro";
 import SkillTag from "@components/SkillTag.astro";
 import Tag from "@components/Tag.astro";
@@ -31,110 +42,105 @@ import Tag from "@components/Tag.astro";
       <h1 class="sm:text-4xl title-font mb-4 font-subtitles text-subtitles text-4xl">My Projects</h1>
     </div>
     <div class="flex flex-wrap -m-4 justify-center">
-      
-
-        <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative size-72">
-            <Image alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-            src={BarcaApi}
-            />
-            <div class="px-8 py-10 relative z-20 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">
-                Barca-API
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                2024
-              </h1>
-              <p class="leading-relaxed">
-                RESTful API that provides detailed data for the 23/24 season of FC Barcelona.
-                <a>
-                  Includes CRUD endpoints and token-based authentication for secure access control.
-                </a>
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-4 gap-3">
-            <SkillTag icon={JS} text="JS"/>
-            <SkillTag icon={SQL} text="MySql"/>
-            <SkillTag icon={Docker} text="Docker"/>
-            <Tag icon="🔑" text="CryptoJS"/>
-          </div>
+      <div class="lg:w-1/3 sm:w-full">
+        <ProjectCard
+          title="Barca-API"
+          description1="RESTful API that provides detailed data for the 23/24 season of FC Barcelona."
+          description2="Includes CRUD endpoints and token-based authentication for secure access control."
+          date="2024"
+          image={BarcaApi}
+          repolink="https://github.com/FabianKel/Barca-API"
+        />
+        <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
+          <SkillTag icon={Python} text=""/>
+          <SkillTag icon={JS} text=""/>
+          <SkillTag icon={SQL} text=""/>
+          <SkillTag icon={Docker} text=""/>
+          <Tag icon="🔐" text="CryptoJS"/>
         </div>
+      </div>
 
-        <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative size-72">
-            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
-            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
-              <p class="leading-relaxed">Just a nice Duck</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-4 gap-3 justify-center">
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-          </div>
-        </div>
 
-        <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative size-72">
-            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
-            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
-              <p class="leading-relaxed">Just a nice Duck</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-4 gap-3 justify-center">
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-          </div>
+      <div class="lg:w-1/3 sm:w-full">
+        <ProjectCard
+          title="Barca-Blog"
+          description1="Client-side React application that consumes data from the Barca-Api."
+          description2="It features a blog view, season results, and an admin CRUD interface."
+          date="2024"
+          image={BarcaBlog}
+          repolink="https://github.com/FabianKel/React-BarcaBlog-CRUD"
+        />
+        <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
+          <SkillTag icon={JS} text=""/>
+          <SkillTag icon={React} text=""/>
+          <SkillTag icon={Vite} text=""/>
+          <SkillTag icon={Html} text=""/>
+          <SkillTag icon={Css} text=""/>
         </div>
+      </div>
 
-        <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative size-72">
-            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
-            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
-              <p class="leading-relaxed">Just a nice Duck</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-4 gap-3 justify-center">
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-          </div>
-        </div>
 
-        <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative size-72">
-            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
-            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
-              <p class="leading-relaxed">Just a nice Duck</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-4 gap-3 justify-center">
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-          </div>
+      <div class="lg:w-1/3 sm:w-full">
+        <ProjectCard
+          title="Magic Words"
+          description1="Interactive application designed for 1st and 2nd grade children to learn English words."
+          description2="This project was developed as a final graduation project in high school."
+          date="2024"
+          image={MagicWords}
+          repolink="https://fabiankel.itch.io/magic-words"
+        />
+        <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
+          <SkillTag icon={Csharp} text=""/>
+          <SkillTag icon={Unity} text="  Unity"/>
         </div>
+      </div>
 
-        <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative size-72">
-            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
-            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
-              <p class="leading-relaxed">Just a nice Duck</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-4 gap-3 justify-center">
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-            <SkillTag icon={Kotlin} text="Kotlin"/>
-          </div>
+
+      <div class="lg:w-1/3 sm:w-full">
+        <ProjectCard
+          title="CSS DEXTER DRAWING"
+          description1="Pure CSS recreation of a character drawing from the popular cartoon &quot;Dexter's Laboratory&quot;."
+          description2=" "
+          date="2024"
+          image={Dexter}
+          repolink="https://github.com/FabianKel/Full-CSS-Drawing"
+        />
+        <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
+          <SkillTag icon={Html} text="HTML"/>
+          <SkillTag icon={Css} text="CSS"/>
         </div>
+      </div>
+
+
+      <div class="lg:w-1/3 sm:w-full">
+        <ProjectCard
+          title="Music Recommendation System"
+          description1="A project designed to suggest music based on the user's preferred genres and emotions."
+          description2=" "
+          date="2022"
+          image={Dexter}
+          repolink="https://github.com/alee2602/Proyecto2ED"
+        />
+        <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
+          <SkillTag icon={Python} text=" "/>
+          <SkillTag icon={Neo4j} text=" "/>
+          <SkillTag icon={Html} text=" "/>
+        </div>
+      </div>
+
+      <div class="lg:w-1/3 sm:w-full">
+        <ProjectCard
+          title="Currently working on More Projects"
+          description1="Visit my GitHub to see more projects"
+          description2=" "
+          date=" "
+          image={Coding}
+          repolink="https://github.com/FabianKel"
+        />
+        <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
+          <Tag icon="🗿" text=" "/>
+        </div>
+      </div>
       
 
     </div>
