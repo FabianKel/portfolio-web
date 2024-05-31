@@ -16,6 +16,7 @@ export default {
 				card: '#17182E',
 				tag: '#1C1F36',
 				body: '#DCE2EB',
+				projectext: '#38BDF8',
 			 },
 			fontFamily: {
 				name: ['Inter-Name', 'sans-serif'],

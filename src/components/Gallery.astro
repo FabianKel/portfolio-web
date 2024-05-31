@@ -1,0 +1,141 @@
+---
+/*----------------------Iconos Skills---------------------------*/
+
+import androidStudioSvg from "@components/assets/icons/svg/androidstudio.astro"
+import Kotlin from "@components/assets/icons/svg/kotlin.astro"
+import Django from "@components/assets/icons/svg/django.astro"
+import Jira from "@components/assets/icons/svg/jira.astro"
+import Html from "@components/assets/icons/svg/html.astro"
+import Css from "@components/assets/icons/svg/css.astro"
+import Python from "@components/assets/icons/svg/python.astro"
+import SQL from "@components/assets/icons/svg/sql.astro"
+import JS from "@components/assets/icons/svg/javascript.astro"
+import Docker from "@components/assets/icons/svg/docker.astro"
+
+
+
+
+/*--------------------------------------------------------------*/
+
+import BarcaApi from "@components/assets/images/Barca-Api-Logo.png";
+
+//import ProjectCard from "@components/ProjectCard.astro";
+import Image from "astro/components/Image.astro";
+import SkillTag from "@components/SkillTag.astro";
+import Tag from "@components/Tag.astro";
+
+---
+
+<div class="container px-5  mx-auto bg-card shadow-md rounded-lg ">
+    <div class="flex flex-col text-center w-full py-8">
+      <h1 class="sm:text-4xl title-font mb-4 font-subtitles text-subtitles text-4xl">My Projects</h1>
+    </div>
+    <div class="flex flex-wrap -m-4 justify-center">
+      
+
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative size-72">
+            <Image alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+            src={BarcaApi}
+            />
+            <div class="px-8 py-10 relative z-20 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">
+                Barca-API
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                2024
+              </h1>
+              <p class="leading-relaxed">
+                RESTful API that provides detailed data for the 23/24 season of FC Barcelona.
+                <a>
+                  Includes CRUD endpoints and token-based authentication for secure access control.
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-4 gap-3">
+            <SkillTag icon={JS} text="JS"/>
+            <SkillTag icon={SQL} text="MySql"/>
+            <SkillTag icon={Docker} text="Docker"/>
+            <Tag icon="🔑" text="CryptoJS"/>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative size-72">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
+            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
+              <p class="leading-relaxed">Just a nice Duck</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-4 gap-3 justify-center">
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative size-72">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
+            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
+              <p class="leading-relaxed">Just a nice Duck</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-4 gap-3 justify-center">
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative size-72">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
+            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
+              <p class="leading-relaxed">Just a nice Duck</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-4 gap-3 justify-center">
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative size-72">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
+            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
+              <p class="leading-relaxed">Just a nice Duck</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-4 gap-3 justify-center">
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative size-72">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fu6js7dp34kw61.jpg&f=1&nofb=1&ipt=c8f70c193a666de97593a69cf5c7fc796324eb9074f8e8f99784cb482e15a2ae&ipo=images">
+            <div class="px-8 py-10 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
+              <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">Duck</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">2024</h1>
+              <p class="leading-relaxed">Just a nice Duck</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-4 gap-3 justify-center">
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+            <SkillTag icon={Kotlin} text="Kotlin"/>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
