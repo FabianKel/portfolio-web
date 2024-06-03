@@ -1,6 +1,110 @@
 ---
+/*----------------------Iconos Skills---------------------------*/
+
+import androidStudioSvg from "@components/assets/icons/svg/androidstudio.astro"
+import Kotlin from "@components/assets/icons/svg/kotlin.astro"
+import Django from "@components/assets/icons/svg/django.astro"
+import Jira from "@components/assets/icons/svg/jira.astro"
+import Html from "@components/assets/icons/svg/html.astro"
+import Css from "@components/assets/icons/svg/css.astro"
+import Python from "@components/assets/icons/svg/python.astro"
+import SQL from "@components/assets/icons/svg/sql.astro"
+import JS from "@components/assets/icons/svg/javascript.astro"
+import Docker from "@components/assets/icons/svg/docker.astro"
+import Java from "@components/assets/icons/svg/java.astro"
+import React from "@components/assets/icons/svg/react.astro"
+import Vite from "@components/assets/icons/svg/vite.astro"
+import Csharp from "@components/assets/icons/svg/csharp.astro"
+import Unity from "@components/assets/icons/svg/unity.astro"
+import Gamemaker from "@components/assets/icons/svg/gamemaker.astro"
+import Neo4j from "@components/assets/icons/svg/neo4j.astro"
+import AstroLogo from "@components/assets/icons/svg/astroLogo.astro"
+import Cpp from "@components/assets/icons/svg/cpp.astro"
+import Linux from "@components/assets/icons/svg/linux.astro"
+import Tailwind from "@components/assets/icons/svg/tailwind.astro"
+import Php from "@components/assets/icons/svg/php.astro"
+import Blender from "@components/assets/icons/svg/blender.astro"
+import Scrum from "@components/assets/icons/svg/scrum.astro"
+
+/*--------------------------------------------------------------*/
+
+import BarcaApi from "@components/assets/images/Barca-Api-Logo.png";
+import BarcaBlog from "@components/assets/images/BarcaBlog.png";
+import MagicWords from "@components/assets/images/MagicWordsIcon.png";
+import Dexter from "@components/assets/images/DexterDrawing.png";
+import MusicRecom from "@components/assets/images/MusicRecom.png";
+import Coding from "@components/assets/images/coding1.jpg";
+
+
+
+import ProjectCard from "@components/ProjectCard.astro";
+import Image from "astro/components/Image.astro";
+import SkillTag from "@components/SkillTag.astro";
+import Tag from "@components/Tag.astro";
+import Astro from "./assets/icons/svg/astro.astro"
+import Androidstudio from "@components/assets/icons/svg/androidstudio.astro"
+
+/* Link para dexter */
+
+const basePath = '/';
+const linkDexter = `${basePath}dexterPage`;
 
 ---
-<div class="container px-5 py-24 mx-auto flex flex-wrap">
 
+<div class="container px-5  py-5 mx-auto">
+    <div class="flex flex-col md:flex-row flex-wrap justify-center gap-y-4">
+
+      <div class="md:w-1/2 flex flex-col items-center">
+        <a class="text-body font-headings text-2xl mb-5">Frontend</a>
+        <div class="flex flex-wrap my-6 gap-5 md:ml-4 justify-center ">
+          <SkillTag icon={Html} text="HTML"/>
+          <SkillTag icon={Css} text="CSS"/>
+          <SkillTag icon={JS} text="JavaScript"/>
+          <SkillTag icon={React} text="React"/>
+          <SkillTag icon={Tailwind} text="Tailwind"/>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col items-center">
+        <a class="text-body font-headings text-2xl mb-5">Backend</a>
+        <div class="flex flex-wrap my-6 gap-5 md:ml-4 justify-center ">
+          <SkillTag icon={Python} text="Python"/>
+          <SkillTag icon={Java} text="Java"/>
+          <SkillTag icon={Php} text=""/>
+          <SkillTag icon={SQL} text="SQL"/>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col items-center">
+        <a class="text-body font-headings text-2xl mb-5">General Knowledge</a>
+        <div class="flex flex-wrap my-6 gap-5 md:ml-4 justify-center ">
+          <SkillTag icon={Scrum} text="Scrum"/>
+          <SkillTag icon={Cpp} text="C++"/>
+          <SkillTag icon={Linux} text="Linux"/>          
+          <SkillTag icon={Blender} text="Blender"/>
+          <Tag icon="💡" text="Design Thinking"/>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col items-center">
+        <a class="text-body font-headings text-2xl mb-5">Tools & Others</a>
+        <div class="flex flex-wrap my-6 gap-5 md:ml-4 justify-center ">
+          <SkillTag icon={Docker} text="Docker"/>
+          <SkillTag icon={Vite} text="Vite"/>
+          <SkillTag icon={Kotlin} text="Kotlin"/>
+          <SkillTag icon={AstroLogo} text="Astro"/>
+          <SkillTag icon={Androidstudio} text="Android Studio"/>
+          <Tag icon="🔐" text="CryptoJS"/>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col items-center">
+        <a class="text-body font-headings text-2xl mb-5">Gamedev</a>
+        <div class="flex flex-wrap my-6 gap-5 md:ml-4 justify-center ">
+          <SkillTag icon={Unity} text="Unity (C#)"/>
+          <SkillTag icon={Gamemaker} text="Game Maker Studio"/>
+        </div>
+      </div>
+
+    </div>
   </div>

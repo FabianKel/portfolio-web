@@ -26,6 +26,7 @@ import BarcaApi from "@components/assets/images/Barca-Api-Logo.png";
 import BarcaBlog from "@components/assets/images/BarcaBlog.png";
 import MagicWords from "@components/assets/images/MagicWordsIcon.png";
 import Dexter from "@components/assets/images/DexterDrawing.png";
+import MusicRecom from "@components/assets/images/MusicRecom.png";
 import Coding from "@components/assets/images/coding1.jpg";
 
 
@@ -35,13 +36,18 @@ import Image from "astro/components/Image.astro";
 import SkillTag from "@components/SkillTag.astro";
 import Tag from "@components/Tag.astro";
 
+/* Link para dexter */
+
+const basePath = '/';
+const linkDexter = `${basePath}dexterPage`;
+
 ---
 
 <div class="container px-5  mx-auto bg-card shadow-md rounded-lg ">
     <div class="flex flex-col text-center w-full py-8">
       <h1 class="sm:text-4xl title-font mb-4 font-subtitles text-subtitles text-4xl">My Projects</h1>
     </div>
-    <div class="flex flex-wrap -m-4 justify-center">
+    <div class="flex flex-wrap -m-4 justify-center pr-5">
       <div class="lg:w-1/3 sm:w-full">
         <ProjectCard
           title="Barca-API"
@@ -49,7 +55,7 @@ import Tag from "@components/Tag.astro";
           description2="Includes CRUD endpoints and token-based authentication for secure access control."
           date="2024"
           image={BarcaApi}
-          repolink="https://github.com/FabianKel/Barca-API"
+          GitHubLink="https://github.com/FabianKel/Barca-API"
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
           <SkillTag icon={Python} text=""/>
@@ -68,7 +74,7 @@ import Tag from "@components/Tag.astro";
           description2="It features a blog view, season results, and an admin CRUD interface."
           date="2024"
           image={BarcaBlog}
-          repolink="https://github.com/FabianKel/React-BarcaBlog-CRUD"
+          GitHubLink="https://github.com/FabianKel/React-BarcaBlog-CRUD"
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
           <SkillTag icon={JS} text=""/>
@@ -87,7 +93,7 @@ import Tag from "@components/Tag.astro";
           description2="This project was developed as a final graduation project in high school."
           date="2024"
           image={MagicWords}
-          repolink="https://fabiankel.itch.io/magic-words"
+          ItchioLink="https://fabiankel.itch.io/magic-words"
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
           <SkillTag icon={Csharp} text=""/>
@@ -103,7 +109,8 @@ import Tag from "@components/Tag.astro";
           description2=" "
           date="2024"
           image={Dexter}
-          repolink="https://github.com/FabianKel/Full-CSS-Drawing"
+          GitHubLink="https://github.com/FabianKel/Full-CSS-Drawing"
+          WebLink={linkDexter}
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
           <SkillTag icon={Html} text="HTML"/>
@@ -118,8 +125,8 @@ import Tag from "@components/Tag.astro";
           description1="A project designed to suggest music based on the user's preferred genres and emotions."
           description2=" "
           date="2022"
-          image={Dexter}
-          repolink="https://github.com/alee2602/Proyecto2ED"
+          image={MusicRecom}
+          GitHubLink="https://github.com/alee2602/Proyecto2ED"
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
           <SkillTag icon={Python} text=" "/>
@@ -135,7 +142,7 @@ import Tag from "@components/Tag.astro";
           description2=" "
           date=" "
           image={Coding}
-          repolink="https://github.com/FabianKel"
+          GitHubLink="https://github.com/FabianKel"
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
           <Tag icon="🗿" text=" "/>

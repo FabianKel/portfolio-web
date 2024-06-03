@@ -1,47 +1,68 @@
 ---
 import Image from "astro/components/Image.astro";
-
-import Github from "@components/assets/icons/svg/github.astro"
-
+import Github from "@components/assets/icons/svg/github.astro";
+import Itchio from "@components/assets/icons/svg/itchio.astro";
+import Web from "@components/assets/icons/svg/web.astro";
 
 interface Props {
   image: any;
   title: string;
-  description1:  string;
+  description1: string;
   description2: string;
   date: string;
-  repolink: string;
+  GitHubLink?: string;
+  WebLink?: string;
+  ItchioLink?: string;
+
 }
 
-
-const { image, title, description1, description2, date, repolink} = Astro.props;
-
+const { image, title, description1, description2, date, GitHubLink, WebLink, ItchioLink } = Astro.props;
 
 ---
-<div class=" h-72 lg:w-1/3 sm:w-1/2 p-4">
-    <div class="flex relative size-72">
-      <Image alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+
+<div class="h-72 lg:w-1/3 sm:w-1/2 p-4">
+  <div class="flex relative size-72">
+    <Image
+      alt="gallery"
+      class="absolute inset-0 w-full h-full object-cover object-center"
       src={image}
-      />
-      <div class="px-8 py-5 relative z-10 w-full border-0  bg-white opacity-0 hover:opacity-100" style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)">
-        <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">{title}</h2>
-        <h1 class="title-font text-lg font-medium text-gray-900 mb-1">{date}</h1>
-        <p class="leading-relaxed">
-          {description1}
-          <a>
-            {description2}
+    />
+    <div
+      class="px-8 py-5 relative z-10 w-full border-0 bg-white opacity-0 hover:opacity-100"
+      style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)"
+    >
+      <h2 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">
+        {title}
+      </h2>
+      <h1 class="title-font text-lg font-medium text-gray-900 mb-1">
+        {date}
+      </h1>
+      <p class="leading-relaxed">
+        {description1}
+        <a>
+          {description2}
+        </a>
+      </p>
+
+      <div class=" flex flex-row justify-center gap-4">
+        {GitHubLink && (
+          <a href={GitHubLink} target="_blank" rel="noreferrer" class="py-3 inline-block">
+            <Github />
           </a>
-        </p>
-        <button onclick={() => handleClick(repolink)} class="py-3">
-          <Github/>
-        </button>
+        )}
+
+        {WebLink && (
+          <a href= {WebLink} target="_blank" rel="noreferrer" class="py-3 inline-block">
+            <Web/>
+          </a>
+        )}
+
+        {ItchioLink && (
+          <a href={ItchioLink} target="_blank" rel="noreferrer" class="py-3 inline-block">
+            <Itchio/>
+          </a>
+        )}
       </div>
     </div>
-    
+  </div>
 </div>
-
-<script>
-  function handleClick(link) {
-    window.open(link, '_blank');
-  }
-</script>
