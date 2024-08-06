@@ -27,6 +27,7 @@ import BarcaBlog from "@components/assets/images/BarcaBlog.png";
 import MagicWords from "@components/assets/images/MagicWordsIcon.png";
 import Dexter from "@components/assets/images/DexterDrawing.png";
 import MusicRecom from "@components/assets/images/MusicRecom.png";
+import Multiversdle from "@components/assets/images/Multiversdle.png"
 import Coding from "@components/assets/images/coding1.jpg";
 
 
@@ -35,6 +36,7 @@ import ProjectCard from "@components/ProjectCard.astro";
 import Image from "astro/components/Image.astro";
 import SkillTag from "@components/SkillTag.astro";
 import Tag from "@components/Tag.astro";
+import Github from "@components/assets/icons/svg/github.astro";
 
 /* Link para dexter */
 
@@ -43,7 +45,7 @@ const linkDexter = `${basePath}dexterPage`;
 
 ---
 
-<div class="container px-5  mx-auto bg-card shadow-md rounded-lg ">
+<div class="flex flex-col container px-5  mx-auto bg-card shadow-md rounded-lg ">
     <div class="flex flex-col text-center w-full py-8">
       <h1 class="sm:text-4xl title-font mb-4 font-subtitles text-subtitles text-4xl">My Projects</h1>
     </div>
@@ -137,18 +139,36 @@ const linkDexter = `${basePath}dexterPage`;
 
       <div class="lg:w-1/3 sm:w-full">
         <ProjectCard
-          title="Currently working on More Projects"
-          description1="Visit my GitHub to see more projects"
+          title="Multiversdle"
+          description1="A web application built with Next.js. It's a Wordle-like game where players guess characters from the video game Multiversus."
           description2=" "
-          date=" "
-          image={Coding}
-          GitHubLink="https://github.com/FabianKel"
+          date="2024"
+          image={Multiversdle}
+          WebLink="https://multiversdle.netlify.app/play"
         />
         <div class="flex flex-wrap my-6 gap-3 ml-4 justify-center">
-          <Tag icon="🗿" text=" "/>
+          <SkillTag icon={JS} text=" "/>
+          <SkillTag icon={React} text=" "/>
+          <SkillTag icon={Html} text=" "/>
+          <SkillTag icon={Css} text=" "/>
+
         </div>
+      </div>      
+
+    </div>
+    <div class="self-center w-full rounded-xl p-4 text-center"
+    style="background-image: linear-gradient(45deg, #706269, #988e8c, #c2bcb1, #ededd8)"
+    >
+    <h1 class="tracking-widest text-2xl title-font font-subtitles text-background mb-1">
+      Currently working on More Projects
+    </h1>
+      <div class="flex flex-row justify-center">
+        <p class="leading-relaxed">
+          Visit my GitHub to see more projects</p>
+      <a href={"https://github.com/FabianKel"} target="_blank" rel="noreferrer" class="pl-4">
+        <Github />
+      </a>
       </div>
       
-
     </div>
   </div>
